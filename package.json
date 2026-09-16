@@ -1,0 +1,54 @@
+{
+  "name": "l2calendar-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for L2 Calendar - query Lineage 2 private server openings by chronicle through the public L2 Calendar API.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "l2calendar-mcp": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "lineage2",
+    "l2",
+    "game-server",
+    "server-tracker",
+    "mmorpg",
+    "api"
+  ],
+  "homepage": "https://l2calendar.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dreiev/l2calendar-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Dreiev/l2calendar-mcp/issues"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "node --experimental-strip-types src/index.ts",
+    "start": "node dist/index.js",
+    "start:http": "node dist/index.js --http",
+    "smoke": "node smoke-test.mjs",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.9.3"
+  }
+}
