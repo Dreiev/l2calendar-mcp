@@ -12,7 +12,8 @@
   "files": [
     "dist",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "server.json"
   ],
   "engines": {
     "node": ">=18"
@@ -50,5 +51,6 @@
   "devDependencies": {
     "@types/node": "^22.10.0",
     "typescript": "^5.9.3"
-  }
+  },
+  "mcpName": "io.github.Dreiev/l2calendar-mcp"
 }
